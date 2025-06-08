@@ -18,7 +18,7 @@ st.markdown("Enter a prompt and let the AI generate creative text for you.")  # 
 
 user_prompt = st.text_area(
     "Enter your prompt here:",
-    "The sun was shining,",
+    "Once upon a time ....",
     height=100
 )
 st.sidebar.header("Generation Settings")
@@ -47,11 +47,15 @@ st.sidebar.info(
 if st.button("Generate Text"):
     if user_prompt:
         with st.spinner("Generating..."):
-            generated_text = \
-                generator(user_prompt, max_length=max_length, temperature=temperature, num_return_sequences=1)[0][
-                    'generated_text']
-            st.subheader("Generated Text:")
-            st.write(generated_text)
+            try:
+                generated_text = \
+                    generator(user_prompt, max_length=max_length, temperature=temperature, num_return_sequences=1)[0][
+                        'generated_text']
+                st.subheader("Generated Text:")
+                st.write(generated_text)
+            except Exception as e:
+                st.error(f"Error generating text: {e}")
+                st.warning("Please try again with different input or settings. Check whether you are connected to the internet.")
     else:
         st.warning("Please enter a prompt.")
 
