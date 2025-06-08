@@ -1,0 +1,66 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# C extensions
+*.so
+*.dll
+*.dylib
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports (if you were to add them)
+.coverage
+.tox/
+.pytest_cache/
+htmlcov/
+
+# PyInstaller / cx_Freeze / Nuitka / py2app
+# These are for packaging your app into executables, not typically source control
+*.spec
+
+
+# Editor directories and files
+.vscode/ # VS Code specific files
+.idea/   # PyCharm specific files
+*.suo    # Visual Studio settings file
+*.user   # Visual Studio settings file
+*.aps    # Visual Studio settings file
+*.bak    # Backup files
+*.vspscc # Visual Studio Project SCC file
+*.vssscc # Visual Studio Source Safe file
+*.pbxuser # Xcode specific files
+*.nib    # Xcode specific files
+*.xib    # Xcode specific files
+*.xcuserstate # Xcode specific files
+
+# OS generated files
+.DS_Store # macOS
+.Trashes  # macOS
+ehthumbs.db # Windows
+Thumbs.db   # Windows
+Desktop.ini # Windows
+
+# Temporary files
+*~
+*.log
+*.temp
+*.tmp
